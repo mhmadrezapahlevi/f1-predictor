@@ -1,0 +1,5 @@
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+# hanya dibutuhkan untuk mengambil data asli (ml/fetch_data.py):
+fastf1>=3.4

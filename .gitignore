@@ -1,0 +1,9 @@
+node_modules/
+dist/
+data/cache/
+data/races.csv
+data/source.txt
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
