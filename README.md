@@ -38,14 +38,14 @@ The "Demo data" banner automatically disappears when the data comes from FastF1.
 
 ## Deploy
 
-`npm run build` menghasilkan folder `dist/` (base `./`, aman untuk GitHub Pages / Vercel / Netlify).
-Jalankan ulang `python ml/train.py` setiap ada balapan baru, lalu build ulang.
+`npm run build` produces a `dist/` folder (base `./`, safe for GitHub Pages / Vercel / Netlify).
+Re-run `python ml/train.py` after each new race, then rebuild.
 
-## Catatan metodologi
+## Methodology notes
 
-- Split latih/uji berdasarkan waktu (musim terakhir = uji), bukan acak.
-- Fitur form hanya memakai balapan sebelumnya (`shift(1)`), jadi tidak ada kebocoran.
-- Hujan dan safety car adalah *skenario*: pada prediksi disimulasikan acak sesuai peluang sirkuit,
-  atau dikunci lewat tombol "Atur sendiri".
-- Pace dihitung dari median lap bersih (bendera hijau, bukan lap pit). Belum dikoreksi
-  untuk beban bahan bakar dan kompon ban, jadi ini perbaikan berikutnya yang paling berguna.
+- Train/test split is by time (last season = test), not random.
+- Form features only use previous races (`shift(1)`), so there is no leakage.
+- Rain and safety cars are scenarios: during prediction they are simulated randomly according to the circuit's probabilities,
+or locked via the "Set manually" button.
+- Pace is calculated from the median clean lap (green flag, not pit lap). It has not been corrected
+for fuel load and tyre compound, so that is the most useful next improvement.
