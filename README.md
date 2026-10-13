@@ -1,9 +1,8 @@
-# Prediksi Juara F1 per Sirkuit
+# F1 Winner Predictions by Circuit
 
-Website yang menampilkan peluang menang dan podium tiap pembalap F1 di setiap sirkuit.
-Peluang dihitung dengan machine learning dari pace lap bersih, degradasi ban, kecepatan pit stop,
-riwayat di sirkuit, kondisi trek (hujan, suhu), dan safety car.
-
+A website that shows each F1 driver's win and podium probabilities at every circuit.
+Probabilities are calculated using machine learning from clean-lap pace, tyre degradation, pit stop speed,
+circuit history, track conditions (rain, temperature), and safety cars.
 ```
 ml/make_demo_data.py   data sintetis (agar bisa langsung dicoba)
 ml/fetch_data.py       data F1 ASLI lewat FastF1  -> data/races.csv
