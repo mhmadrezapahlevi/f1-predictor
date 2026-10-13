@@ -3,29 +3,29 @@
 A website that shows each F1 driver's win and podium probabilities at every circuit.
 Probabilities are calculated using machine learning from clean-lap pace, tyre degradation, pit stop speed,
 circuit history, track conditions (rain, temperature), and safety cars.
+
 ```
-ml/make_demo_data.py   data sintetis (agar bisa langsung dicoba)
-ml/fetch_data.py       data F1 ASLI lewat FastF1  -> data/races.csv
-ml/features.py         feature engineering tanpa kebocoran data
-ml/train.py            latih + evaluasi + simulasi -> public/predictions.json
-src/ index.html        website (Vite + TypeScript, tanpa framework)
+ml/make_demo_data.py   synthetic data (so you can try it immediately)
+ml/fetch_data.py       REAL F1 data via FastF1  -> data/races.csv
+ml/features.py         feature engineering without data leakage
+ml/train.py            train + evaluate + simulate -> public/predictions.json
+src/ index.html        website (Vite + TypeScript, no framework)
 ```
 
-## Coba cepat (data demo)
-
+## Quick start (demo data)
 ```bash
 pip install numpy pandas scikit-learn
 python ml/make_demo_data.py
 python ml/train.py
 
 npm install
-npm run dev          # buka alamat yang tampil, biasanya http://localhost:5173
+npm run dev         # open the shown address, usually http://localhost:5173
 ```
 
-File `public/predictions.json` hasil demo sudah disertakan, jadi `npm install && npm run dev`
-saja sudah menampilkan website.
+The demo `public/predictions`.json output is included, so `npm install && npm run dev`
+alone will display the website.
 
-## Pakai data asli
+## Using real data
 
 ```bash
 pip install -r requirements.txt
@@ -34,7 +34,7 @@ python ml/train.py
 npm run dev
 ```
 
-Banner "Data demo" otomatis hilang bila data berasal dari FastF1.
+The "Demo data" banner automatically disappears when the data comes from FastF1.
 
 ## Deploy
 
